@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./createnewbingomodal.css";
+
 function CreateNewBingoModal(props) {
-  const [settings, setSettings] = useState({ topic: "mixed", size: "3" });
+  const [settings, setSettings] = useState({
+    topic: "initialWords",
+    size: "3",
+  });
   const { show, buttonClicked } = props;
 
   function handleSubmit(e) {
@@ -9,8 +13,6 @@ function CreateNewBingoModal(props) {
     e.target.style.display = "none";
     console.log("saus und braus", settings);
     buttonClicked(settings);
-    // TODO: a lot of stuff in parten: fetch data from db
-    console.log("fetch data in future...");
   }
 
   function handleChange(e) {
