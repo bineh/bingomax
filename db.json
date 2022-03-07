@@ -1,0 +1,24 @@
+{
+  "initialWords": [
+    { "de": "Katze", "en": "cat", "flipped": false },
+    { "de": "Auto", "en": "car", "flipped": false },
+    { "de": "Schnee", "en": "snow", "flipped": false },
+    { "de": "Tisch", "en": "table", "flipped": false },
+    { "de": "Fluss", "en": "river", "flipped": false },
+    { "de": "Baum", "en": "tree", "flipped": false },
+    { "de": "Hund", "en": "dog", "flipped": false },
+    { "de": "Blume", "en": "flower", "flipped": false },
+    { "de": "Stuhl", "en": "chair", "flipped": false }
+  ],
+  "traffic": [
+    { "de": "Fahrrad", "en": "bike", "flipped": false },
+    { "de": "Bus", "en": "bus", "flipped": false },
+    { "de": "Auto", "en": "car", "flipped": false },
+    { "de": "Flugzeug", "en": "plane", "flipped": false },
+    { "de": "Zug", "en": "train", "flipped": false },
+    { "de": "Motarrad", "en": "motorbike", "flipped": false },
+    { "de": "Strasse", "en": "street", "flipped": false },
+    { "de": "Ampel", "en": "trafficlight", "flipped": false },
+    { "de": "Mama braucht Kaffee", "en": "coffeeshop", "flipped": false }
+  ]
+}
