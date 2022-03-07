@@ -4,6 +4,7 @@ import "./flipcard.css";
 export default function FlipCard({ word, randomWord, flipped }) {
   // This can be used if we want to remove the first flip when reloading page
   // const [flipBack, setBackFlip] = useState(false);
+  console.log(word);
 
   function transformCard(e) {
     if (document.getElementById(e.target.id))
