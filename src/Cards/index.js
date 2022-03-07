@@ -15,7 +15,8 @@ import FailedModal from "../FailedModal";
 //   { de: "Stuhl", en: "Chair", flipped: false },
 // ];
 
-function Cards() {
+function Cards({ globalWords }) {
+  console.log("props", globalWords);
   let initialWords = [];
   const [randomWord, setRandomWord] = useState({});
   const [words, setWords] = useState([]);
@@ -23,10 +24,8 @@ function Cards() {
   const [failedModal, setShowFailedModal] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:4000/initialWords")
-      .then((response) => response.json())
-      .then((data) => setWords(data));
-  }, []);
+    setWords(globalWords);
+  }, [globalWords]);
 
   useEffect(() => {
     // function randomizer() {
@@ -46,6 +45,8 @@ function Cards() {
     setWrongWords([]);
     setShowFailedModal(false);
   };
+
+  // console.log("words", words);
 
   return (
     <>
