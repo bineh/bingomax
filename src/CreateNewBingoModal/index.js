@@ -31,6 +31,7 @@ function CreateNewBingoModal(props) {
       <div className="modal-content">
         <div className="topic">
           <form onSubmit={handleSubmit}>
+            <div className="title">Choose Options</div>
             <label>Choose Topic</label>
             <select onChange={handleChange} value={settings.topic} name="topic">
               <option id="initialWords">mixed</option>
@@ -39,11 +40,13 @@ function CreateNewBingoModal(props) {
             <div>
               <label>Choose Size</label>
               <select onChange={handleChange} value={settings.size} name="size">
-                <option id="3">3</option>
+                <option id="3" className="option">
+                  3
+                </option>
                 <option id="tbd2">tbd...</option>
               </select>
             </div>
-            <input type="submit" value="Ok" />
+            <input type="submit" value="Ok" className="submitButton" />
           </form>
         </div>
       </div>

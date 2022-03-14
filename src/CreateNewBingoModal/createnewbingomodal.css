@@ -12,12 +12,20 @@
 
 .modal-content {
   width: 500px;
-  background-color: azure;
-  line-height: 200px;
-  /* color: grey;
-  font-size: 50px;
-  font-weight: 800; */
+  height: 260px;
+  background-color: rgba(219, 215, 241, 0.932);
+  line-height: 50px;
+  border-radius: 30px;
 }
+
+.title {
+  color: rgb(90, 68, 216);
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
 label {
   /* width: 500px;
   background-color: azure;
@@ -27,4 +35,25 @@ label {
   font-size: 20px;
   font-weight: 300;
   margin: 20px;
+}
+
+select {
+  width: 80px;
+  height: 30px;
+  /* padding: 30px; */
+  background-color: rgb(203, 197, 241);
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid rgb(90, 68, 216);
+}
+
+.submitButton {
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+  border: 2px solid rgb(90, 68, 216);
+  border-radius: 10px;
+  color: rgb(90, 68, 216);
+  background-color: rgba(101, 76, 241, 0.199);
+  font-weight: bold;
 }

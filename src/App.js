@@ -1,13 +1,12 @@
 import "./App.css";
 import BingoContainer from "./BingoContainer";
-
-import Cards from "./Cards";
+// import Congratulations from "./Congratulations";
 
 function App() {
   return (
     <div className="App">
-      {/* <Cards /> */}
       <BingoContainer />
+      {/* <Congratulations /> */}
     </div>
   );
 }
