@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./cards.css";
 import FlipCard from "../FlipCard";
 import FailedModal from "../FailedModal";
+import WinnerModal from "../WinnerModal";
+import { win } from "../utils/bingoLogic";
 
 // const initialWords = [
 //   { de: "Katze", en: "Cat", flipped: false },
@@ -46,7 +48,12 @@ function Cards({ globalWords }) {
     setShowFailedModal(false);
   };
 
-  // console.log("words", words);
+  // FIXME: broken n in win function when initialising with n=0
+  // words && words.length > 0 && console.log("win words", win(words));
+  console.log("win words", win(words));
+  const bingoFound = win(words) && win(words).length > 0;
+
+  // bingoFound && console.log("BINGOOOOO");
 
   return (
     <>
@@ -60,7 +67,7 @@ function Cards({ globalWords }) {
               setWords((oldWords) => {
                 let result = [...oldWords];
                 if (randomWord.en === result[index].en) {
-                  // DOES NOT WORK! changeing also in old copy!
+                  // DOES NOT WORK! changeing also in old copy:
                   // result[index].flipped = true;
                   result[index] = { ...oldWords[index], flipped: true };
                   setWords(result);
@@ -83,6 +90,7 @@ function Cards({ globalWords }) {
         ))}
       </div>
       <FailedModal show={failedModal} startNew={resetAndStartNew} />
+      <WinnerModal show={bingoFound} startNew={resetAndStartNew} />
       <div className="wrongWords-container">
         {wrongWords &&
           wrongWords.map((wrongWord) => (
